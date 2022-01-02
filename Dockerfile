@@ -10,7 +10,7 @@ RUN apk --no-cache update && \
     curl -LO https://github.com/oauth2-proxy/oauth2-proxy/releases/download/${VERSION}/oauth2-proxy-${VERSION}.linux-amd64.tar.gz && \
     tar zxvf oauth2-proxy-${VERSION}.linux-amd64.tar.gz
 
-FROM gcr.io/distroless/base as runner
+FROM gcr.io/distroless/static-debian11 as runner
 
 ARG VERSION
 
